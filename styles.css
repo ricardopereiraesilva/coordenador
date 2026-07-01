@@ -1,0 +1,86 @@
+/* Guia do Coordenador(a) de Pesquisa — estilo compartilhado
+   Paleta herdada do guia do entrevistador (consistência visual). */
+:root {
+  --azul:#0d6efd; --azul-esc:#0a58ca; --tinta:#212529; --suave:#f1f6ff;
+  --amarelo:#fff3cd; --amarelo-b:#ffc107;
+  --verde:#198754; --verde-suave:#d1e7dd;
+  --perigo:#dc3545; --perigo-suave:#f8d7da;
+  --cinza:#6c757d;
+}
+* { box-sizing: border-box; }
+body {
+  font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: var(--tinta); line-height: 1.65; margin: 0;
+  background: #f8f9fa; padding: 0 16px;
+}
+main { max-width: 760px; margin: 24px auto 40px; background: #fff;
+  padding: 20px 28px 40px; box-shadow: 0 1px 6px rgba(0,0,0,.08); border-radius: 10px; }
+
+/* Barra superior (link para o índice) */
+.topbar { font-size: .9rem; padding-bottom: 10px; margin-bottom: 6px;
+  border-bottom: 1px solid #e3e8ee; }
+.topbar a { color: var(--cinza); text-decoration: none; }
+.topbar a:hover { color: var(--azul-esc); text-decoration: underline; }
+
+header { border-bottom: 3px solid var(--azul); padding-bottom: 12px; margin-bottom: 8px; }
+.crumb { color: var(--cinza); font-size: .85rem; margin: 0 0 2px; text-transform: uppercase; letter-spacing: .03em; }
+h1 { color: var(--azul-esc); font-size: 1.6rem; margin: 0 0 4px; }
+.sub { color: #555; margin: 0; }
+h2 { color: var(--azul-esc); margin-top: 1.8em; border-bottom: 1px solid #e3e8ee;
+  padding-bottom: 6px; font-size: 1.25rem; }
+h3 { color: var(--azul-esc); font-size: 1.05rem; margin-top: 1.4em; }
+h4 { margin: 0 0 6px; font-size: 1rem; }
+strong { color: #111; }
+ul, ol { padding-left: 1.4em; }
+li { margin: .3em 0; }
+code { background: #eef2f7; padding: 1px 5px; border-radius: 4px; font-size: .92em; }
+
+/* Dica / observação */
+blockquote { background: var(--suave); border-left: 4px solid var(--azul);
+  margin: 1em 0; padding: 10px 16px; border-radius: 0 6px 6px 0; }
+
+/* Caixa "O que dizem os Termos" */
+aside.terms { background: #eef4ff; border: 1px solid #cfe0ff; border-left: 5px solid var(--azul);
+  border-radius: 8px; padding: 12px 16px; margin: 1.2em 0; }
+aside.terms h4 { color: var(--azul-esc); }
+aside.terms h4::before { content: "§ "; }
+
+/* Banner de atenção — ação irreversível / bloqueio */
+aside.warn { background: var(--perigo-suave); border: 1px solid #f1aeb5; border-left: 5px solid var(--perigo);
+  border-radius: 8px; padding: 12px 16px; margin: 1.2em 0; }
+aside.warn strong { color: #842029; }
+
+/* Caixa de exemplo */
+aside.ex { background: var(--verde-suave); border: 1px solid #a3cfbb; border-left: 5px solid var(--verde);
+  border-radius: 8px; padding: 12px 16px; margin: 1.2em 0; }
+aside.ex h4 { color: #0f5132; }
+aside.ex h4::before { content: "🧭 "; }
+
+/* Figuras e placeholders de tela (mobile-first, largura estreita) */
+figure.shot { margin: 1.2em 0; text-align: center; }
+figure.shot img { max-width: 100%; width: 300px; height: auto;
+  border: 1px solid #dee2e6; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,.12); }
+figure.shot .ph { width: 300px; max-width: 100%; margin: 0 auto; min-height: 180px;
+  display: flex; align-items: center; justify-content: center; text-align: center;
+  border: 2px dashed #adb5bd; border-radius: 8px; color: var(--cinza); background: #f8f9fa;
+  font-size: .85rem; padding: 16px; }
+figcaption { color: var(--cinza); font-size: .87rem; font-style: italic; margin-top: 6px; }
+
+/* Navegação de rodapé (anterior / índice / próximo) */
+nav.pager { display: flex; flex-wrap: wrap; gap: 10px; justify-content: space-between;
+  align-items: center; margin-top: 2.5em; padding-top: 14px; border-top: 1px solid #e3e8ee;
+  font-size: .92rem; }
+nav.pager a { text-decoration: none; color: var(--azul-esc); padding: 8px 12px;
+  border: 1px solid #cfe0ff; border-radius: 8px; background: var(--suave); }
+nav.pager a:hover { background: #e2edff; }
+nav.pager a.home { color: var(--cinza); background: #f1f3f5; border-color: #dee2e6; }
+nav.pager span.disabled { visibility: hidden; }
+
+/* Índice (sumário) */
+ol.toc { list-style: none; padding-left: 0; }
+ol.toc > li { margin: .5em 0; padding: 10px 14px; border: 1px solid #e3e8ee; border-radius: 8px; }
+ol.toc a { text-decoration: none; color: var(--azul-esc); font-weight: 600; }
+ol.toc a:hover { text-decoration: underline; }
+ol.toc .desc { display: block; color: #555; font-weight: 400; font-size: .9rem; margin-top: 2px; }
+.part { margin-top: 1.6em; color: var(--cinza); text-transform: uppercase;
+  letter-spacing: .04em; font-size: .82rem; font-weight: 700; }
